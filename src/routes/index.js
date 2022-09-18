@@ -2,8 +2,7 @@ import React, { Suspense } from 'react'
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Navigate
+  Route
 } from 'react-router-dom'
 import ErrorBoundry from '../components/errorBoundary'
 import Loader from '../components/loader'
@@ -15,13 +14,12 @@ const RouteComponent = () => {
       <ErrorBoundry>
         <Suspense fallback={<Loader />}>
           <Routes>
-            <Route path='/' element={<Navigate to='/login' />} />
             {RouteFile.map((route, index) => (
               <Route
                 key={index}
                 path={route.path}
                 exact={route.exact}
-                element={route.component}
+                element={route.element}
               />
             ))}
           </Routes>

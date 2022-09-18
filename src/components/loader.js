@@ -9,7 +9,7 @@ const Loader = () => {
           height={100}
           width={100}
           radius={5}
-          color='#0284C7'
+          color='green'
           ariaLabel='ball-triangle-loading'
           wrapperStyle={{
             width: '100%',
