@@ -1,7 +1,12 @@
+import React from 'react'
+import RouteComponent from './routes/index'
+import 'react-toastify/dist/ReactToastify.css'
+import { Slide, ToastContainer } from 'react-toastify'
 function App () {
   return (
     <div>
-      <h1 className='text-3xl font-bold  text-center p-5'>Hello world!</h1>
+      <RouteComponent />
+      <ToastContainer autoClose={1500} transition={Slide} />
     </div>
   )
 }
